@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Sujal Samai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Gantari:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/33372bf67e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <h1>SS.</h1>
+      </div>
+      <button class="mobile-nav-toggler visible-pos">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+      </button>
+      <div class="navbar visible">
+        <a class="nav-items" href="../index.html">Home</a>
+        <a class="nav-items" href="./about.html">About</a>
+        <a class="nav-items" href="./projects.html">Projects</a>
+        <a class="nav-items" href="./resume.html">Resume</a>
+        <div class="mode">
+          <img id="icon" src="./assets/sun.png" />
+        </div>
+      </div>
+    </nav>
+    <section class="main">
+      <div class="header">
+        <h1>Contact.</h1>
+      </div>
+      <div class="description">
+        <p>
+          Get in touch or shoot me an email directly on
+          <b>sujalsamai123@gmail.com</b>
+        </p>
+      </div>
+      <form method="post" action="https://formspree.io/f/mdobvqal">
+        <div class="fields">
+          <div class="field half">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              class="form-control"
+              aria-required="true"
+              required
+            />
+          </div>
+          <div class="field half">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              class="form-control"
+              aria-required="true"
+              required
+            />
+          </div>
+          <div class="field">
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              class="form-control"
+              placeholder="Message"
+              aria-required="true"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <button class="btn btn-default" type="submit" aria-label="Send Message">
+          <b>Send Message</b>
+        </button>
+      </form>
+      <a href="../index.html">
+        <div class="more">
+          Go Back Home<span><i class="fa-solid fa-arrow-right-long"></i></span>
+        </div>
+      </a>
+    </section>
+    <footer>
+      <div class="social">
+        <a href="https://twitter.com/SujalSamai"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/sujal-samai/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/SujalSamai"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+      <div class="watermark">Contact.</div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
