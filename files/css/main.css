@@ -167,7 +167,7 @@ a::focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 }
 
 .card {
@@ -178,6 +178,11 @@ a::focus {
   border-radius: 10px;
   opacity: 0.8;
   width: 47%;
+}
+@media screen and (max-width:480px){
+  .card{
+    width: 100%;
+  }
 }
 
 .card-img {
@@ -231,7 +236,7 @@ a::focus {
 }
 
 .resume-png {
-  width: 80%;
+  width: 65%;
   border: 1px solid #000;
   box-shadow: 10px 10px 8px rgb(50, 51, 51);
 }
@@ -432,6 +437,7 @@ footer {
     display: none;
   }
   .card {
+    width: 100%;
     margin: 10px 0;
     background: linear-gradient(to top, #000 100%, var(--gradient-color) 80%);
     overflow: hidden;
@@ -441,7 +447,7 @@ footer {
   }
   .card-desc {
     height: 100%;
-    padding-top: 40%;
+    padding-top: 30%;
     line-height: 1.5;
     color: #fff;
     background: var(--gradient-color);
@@ -452,13 +458,13 @@ footer {
   }
   .card-desc p {
     opacity: 1;
-    margin-bottom: 10%;
+    margin-bottom:3%;
   }
   .card-desc .tech {
     opacity: 1;
   }
   .card-img {
-    width: 31rem;
+    width: 100%;
   }
   .resume-png {
     width: 100%;
@@ -469,4 +475,13 @@ footer {
   .btn {
     width: 40%;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+@media screen and (min-width:600px) {
+  .card{
+    width:48%;
+  }
+  .card-desc{
+    padding-top: 50%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
