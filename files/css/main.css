@@ -212,6 +212,8 @@ a::focus {
   font-weight: 600;
   color: #fff;
   line-height: 2;
+  display: flex;
+  flex-direction: column;
 }
 .card-desc h2 {
   font-weight: bolder;
@@ -221,18 +223,24 @@ a::focus {
 }
 .card-desc p {
   opacity: 0;
+  line-height: 1.2;
   transform: translateY(10px);
 }
-.card-desc .tech {
+.card-desc .tech-container{
+  display: flex;
+}
+.card-desc .tech{
+  margin-top: 0.3rem;
+  margin-right: 0.5rem;
   opacity: 0;
-  transform: translateY(10px);
   font-size: 70%;
-  font-weight: bold;
+  transform: translateY(10px);
   background-color: rgba(128, 128, 128, 0.815);
-  display: inline;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 15px;
+  padding: 4px;
+  flex-direction: row;
 }
+
 
 .card:hover .card-desc h2,
 .card:hover .card-desc p {
@@ -454,8 +462,6 @@ footer {
     opacity: 0.8;
   }
   .card-desc {
-    height: 100%;
-    padding-top: 30%;
     line-height: 1.5;
     color: #fff;
     background: var(--gradient-color);
@@ -489,9 +495,7 @@ footer {
   .card{
     width:48%;
   }
-  .card-desc{
-    padding-top: 50%;
-  }
+  
 }
 /*# sourceMappingURL=main.css.map */
 
