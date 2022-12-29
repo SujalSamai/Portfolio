@@ -1,52 +1,52 @@
-let darkMode = localStorage.getItem("darkMode");
-const darkModeToggleIndex = document.querySelector("#icon");
+let lightMode = localStorage.getItem("lightMode");
+const darkModeToggle = document.querySelector("#icon");
 
-const enableDarkMode = () => {
+const enableLightMode = () => {
   // 1. Add the class to the body
-  document.body.classList.remove("light-theme");
+  document.body.classList.remove("dark-theme");
 
   // 2. Update darkMode in localStorage
-  localStorage.setItem("darkMode", "enabled");
+  localStorage.setItem("lightMode", "enabled");
 };
 
-const disableDarkMode = () => {
+const disableLightMode = () => {
   // 1. Remove the class from the body
-  document.body.classList.add("light-theme");
+  document.body.classList.add("dark-theme");
 
   // 2. Update darkMode in localStorage
-  localStorage.setItem("darkMode", null);
+  localStorage.setItem("lightMode", null);
 };
 
+// If the user already visited and enabled darkMode
+// start things off with it on
 window.onload = function () {
-  if (darkMode !== "enabled") {
-    darkModeToggleIndex.src = "./files/assets/moon.png";
-    disableDarkMode();
+  if (lightMode === "enabled") {
+    darkModeToggle.src = "./files/assets/moon.png";
+    enableLightMode();
   } else {
-    enableDarkMode();
+    disableLightMode();
   }
 };
 
 // When someone clicks the button
-darkModeToggleIndex.addEventListener("click", () => {
+darkModeToggle.addEventListener("click", () => {
   // get their darkMode setting
-  darkMode = localStorage.getItem("darkMode");
+  lightMode = localStorage.getItem("lightMode");
 
   // if it not current enabled, enable it
-  if (darkMode !== "enabled") {
-    darkModeToggleIndex.src = "./files/assets/sun.png";
-    enableDarkMode();
+  if (lightMode !== "enabled") {
+    darkModeToggle.src = "./files/assets/moon.png";
+    enableLightMode();
     // if it has been enabled, turn it off
   } else {
-    darkModeToggleIndex.src = "./files/assets/moon.png";
-    disableDarkMode();
+    darkModeToggle.src = "./files/assets/sun.png";
+    disableLightMode();
   }
 });
 
 const primaryNav = document.querySelector(".navbar");
 const navToggle = document.querySelector(".mobile-nav-toggler");
-
-// const visibility = primaryNav.classList.contains("visible");
-// console.log(visibility);
+// const navItems = document.querySelector(".nav-items");
 
 navToggle.addEventListener("click", () => {
   if (primaryNav.classList.contains("visible")) {

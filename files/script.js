@@ -1,46 +1,46 @@
-let darkMode = localStorage.getItem("darkMode");
+let lightMode = localStorage.getItem("lightMode");
 const darkModeToggle = document.querySelector("#icon");
 
-const enableDarkMode = () => {
+const enableLightMode = () => {
   // 1. Add the class to the body
-  document.body.classList.remove("light-theme");
+  document.body.classList.remove("dark-theme");
 
   // 2. Update darkMode in localStorage
-  localStorage.setItem("darkMode", "enabled");
+  localStorage.setItem("lightMode", "enabled");
 };
 
-const disableDarkMode = () => {
+const disableLightMode = () => {
   // 1. Remove the class from the body
-  document.body.classList.add("light-theme");
+  document.body.classList.add("dark-theme");
 
   // 2. Update darkMode in localStorage
-  localStorage.setItem("darkMode", null);
+  localStorage.setItem("lightMode", null);
 };
 
 // If the user already visited and enabled darkMode
 // start things off with it on
 window.onload = function () {
-  if (darkMode !== "enabled") {
+  if (lightMode === "enabled") {
     darkModeToggle.src = "./assets/moon.png";
-    disableDarkMode();
+    enableLightMode();
   } else {
-    enableDarkMode();
+    disableLightMode();
   }
 };
 
 // When someone clicks the button
 darkModeToggle.addEventListener("click", () => {
   // get their darkMode setting
-  darkMode = localStorage.getItem("darkMode");
+  lightMode = localStorage.getItem("lightMode");
 
   // if it not current enabled, enable it
-  if (darkMode !== "enabled") {
-    darkModeToggle.src = "./assets/sun.png";
-    enableDarkMode();
+  if (lightMode !== "enabled") {
+    darkModeToggle.src = "./assets/moon.png";
+    enableLightMode();
     // if it has been enabled, turn it off
   } else {
-    darkModeToggle.src = "./assets/moon.png";
-    disableDarkMode();
+    darkModeToggle.src = "./assets/sun.png";
+    disableLightMode();
   }
 });
 
@@ -57,6 +57,3 @@ navToggle.addEventListener("click", () => {
     navToggle.classList.add("visible-pos");
   }
 });
-
-// const visibility = primaryNav.classList.contains("visible");
-// console.log(visibility);
